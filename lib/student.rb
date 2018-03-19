@@ -54,6 +54,7 @@ class Student
       WHERE name = ?
     SQL
     students = DB[:conn].execute(sql,"Sam").first
+    student = self.find_by_name(students[1])
   end
 
   def self.all_students_in_grade_X(x)
